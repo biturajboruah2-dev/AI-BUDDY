@@ -15,17 +15,23 @@
 
 <script>
 function reply(){
-  let msg = document.getElementById("userInput").value;
+  let msg = document.getElementById("userInput").value.toLowerCase();
   let answer = "";
 
-  if(msg.toLowerCase().includes("hello")){
-    answer = "Hello! Moi AI Buddy 😊";
+  if(msg.includes("hello") || msg.includes("hi")){
+    answer = "Hello! Moi AI Buddy 🤖😊";
   }
-  else if(msg.toLowerCase().includes("name")){
+  else if(msg.includes("naam") || msg.includes("name")){
     answer = "Mur naam AI Buddy 🤖";
   }
+  else if(msg.includes("ki kori asa")){
+    answer = "Moi tumar logot kotha pati asu 😊";
+  }
+  else if(msg.includes("assam")){
+    answer = "Assam bohut dhunia jagah ❤️";
+  }
   else{
-    answer = "Moi tumar kotha hunisu. Aaru kua 😊";
+    answer = "Bujisu 😊 Aaru kua, moi help korim.";
   }
 
   document.getElementById("reply").innerHTML = answer;
