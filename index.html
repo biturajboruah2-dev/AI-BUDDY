@@ -18,20 +18,29 @@ function reply(){
   let msg = document.getElementById("userInput").value.toLowerCase();
   let answer = "";
 
-  if(msg.includes("hello") || msg.includes("hi")){
-    answer = "Hello! Moi AI Buddy 🤖😊";
+  if(msg.includes("hi") || msg.includes("hello") || msg.includes("hlw")){
+    answer = "Hello! Moi AI Buddy 🤖😊 Tumi keneka asa?";
+  }
+  else if(msg.includes("keneka asa") || msg.includes("khabar")){
+    answer = "Moi bhal asu 😊 Tumar khobor kua.";
   }
   else if(msg.includes("naam") || msg.includes("name")){
     answer = "Mur naam AI Buddy 🤖";
   }
-  else if(msg.includes("ki kori asa")){
-    answer = "Moi tumar logot kotha pati asu 😊";
+  else if(msg.includes("tumi kun")){
+    answer = "Moi AI Buddy, tumar logot kotha patiboloi bonua hoise 😊";
+  }
+  else if(msg.includes("help")){
+    answer = "Hoi, moi help koribo parim. Kua ki janibo bisara 😊";
   }
   else if(msg.includes("assam")){
     answer = "Assam bohut dhunia jagah ❤️";
   }
+  else if(msg.includes("dhonyobad") || msg.includes("thanks")){
+    answer = "Welcome 😊 Aaru kiba janibo bisarile kua.";
+  }
   else{
-    answer = "Bujisu 😊 Aaru kua, moi help korim.";
+    answer = "Bujisu 😊 Aaru olop bistar koi kua, moi help korim.";
   }
 
   document.getElementById("reply").innerHTML = answer;
