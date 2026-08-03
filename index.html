@@ -6,5 +6,30 @@
 <body>
   <h1>Welcome to AI Buddy</h1>
   <p>Smart AI Assam</p>
+<div style="margin-top:20px;text-align:center;">
+  <h2>🤖 AI Buddy</h2>
+  <input id="userInput" placeholder="Message likha..." style="padding:10px;width:80%;">
+  <button onclick="reply()" style="padding:10px;">Send</button>
+  <p id="reply"></p>
+</div>
+
+<script>
+function reply(){
+  let msg = document.getElementById("userInput").value;
+  let answer = "";
+
+  if(msg.toLowerCase().includes("hello")){
+    answer = "Hello! Moi AI Buddy 😊";
+  }
+  else if(msg.toLowerCase().includes("name")){
+    answer = "Mur naam AI Buddy 🤖";
+  }
+  else{
+    answer = "Moi tumar kotha hunisu. Aaru kua 😊";
+  }
+
+  document.getElementById("reply").innerHTML = answer;
+}
+</script>
 </body>
 </html>
